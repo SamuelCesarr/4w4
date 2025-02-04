@@ -13,33 +13,41 @@
 <body>
     <header>
         <div class="entete">
-            <figure class="entete__logo">
-                
-            <img src="<?php echo get_template_directory_uri() . '/images/logo.png' ?>" alt="logo voyage">
+            <figure class="entete__logo">                
+                <img src="<?php echo get_template_directory_uri() . '/images/logo.png' ?>" alt="logo voyage">
             </figure>
             <div class="entete__nav">
                 <nav class="entete__menu">
                     <ul class="menu">
                         <li class="menu__li">
-                            <a class="menu__a" href="#">Aventure</a>
+                            <a class="menu__a" href="#">Sport</a>
                         </li>
                         <li class="menu__li">
-                            <a class="menu__a" href="#">Sportive</a>
+                            <a class="menu__a" href="#">Pleine Nature</a>
                         </li>
                         <li class="menu__li">
-                            <a class="menu__a"  href="#">Culturelle</a>
+                            <a class="menu__a"  href="#">Croisière</a>
+                        </li>
+                        <li class="menu__li">
+                            <a  class="menu__a" href="#">Aventure</a>
+                        </li>
+                        <li class="menu__li">
+                            <a class="menu__a" href="#">Culturel</a>
+                        </li>
+                        <li class="menu__li">
+                            <a class="menu__a"  href="#">Repos</a>
                         </li>
                         <li class="menu__li">
                             <a  class="menu__a" href="#">Zen</a>
                         </li>
                         <li class="menu__li">
-                            <a class="menu__a" href="#">Sportive</a>
+                            <a  class="menu__a" href="#">Économique</a>
                         </li>
                         <li class="menu__li">
-                            <a class="menu__a"  href="#">Culturelle</a>
+                            <a  class="menu__a" href="#">Favorite</a>
                         </li>
                         <li class="menu__li">
-                            <a  class="menu__a" href="#">Zen</a>
+                            <a  class="menu__a" href="#">Pays</a>
                         </li>
                     </ul>
                 </nav>
@@ -55,10 +63,10 @@
     <section class="hero">
         <div class="hero__contenu global">
             <h1 class="hero__titre">
-                Club de voyage
+                Voyagez Autrement avec Mondo Voyages!
             </h1>
             <p class="hero__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aspernatur est officiis, mollitia minus asperiores quas libero saepe consequuntur at blanditiis et eligendi, sequi sit quae laboriosam, ex delectus nesciunt.
+                Découvrez des destinations uniques et inoubliables avec Mondo Voyages. Nous vous offrons des expériences authentiques, des paysages à couper le souffle et des aventures sur mesure. Partez à la découverte du monde avec nous et créez des souvenirs impérissables.
             </p>
             <a href="" class="hero__courriel">
                 info@cmaisonneuve.qc.ca
