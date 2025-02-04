@@ -14,7 +14,7 @@
     <header>
         <div class="entete">
             <figure class="entete__logo">
-            <img src="http://localhost/4w4/wp-content/themes/exercice1/images/logo.png" alt="logo voyage">
+            <img src="http://localhost/4w4/wp-content/themes/theme-tp/images/logo.png" alt="logo voyage">
             </figure>
             <div class="entete__nav">
                 <nav class="entete__menu">
@@ -82,7 +82,7 @@
     <section class="promotion">
         <div class="carte carte--grande">
             <figure class="carte__image">
-                <img src="http://localhost/4w4/wp-content/themes/exercice1/images/img1.jpg" alt="Image de voyage">
+                <img src="http://localhost/4w4/wp-content/themes/theme-tp/images/img1.jpg" alt="Image de voyage">
             </figure>
             <div class="carte__contenu">
                 <h2 class="carte__titre">Destination de rêve</h2>
