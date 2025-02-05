@@ -31,11 +31,10 @@ Les composants
 @media screen and (max-width: 700px) {
   .menu {
     flex-direction: column;
+    gap: 6px 0;
   }
 }
 .menu__a {
-  color: #333;
-  text-decoration: none;
   padding: 2px 5px;
 }
 
@@ -114,8 +113,98 @@ Layout
 }
 
 .hero {
+  position: relative;
   min-height: 100vh;
   background-image: url("images/maldives.jpg");
+}
+.hero__contenu-global {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 50px;
+}
+.hero__titre {
+  text-shadow: green 1px 0 10px;
+}
+.hero a {
+  margin-bottom: 10px;
+}
+.hero button {
+  background-color: aquamarine;
+  padding: 5px;
+  border-radius: 10px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.inscription {
+  position: absolute;
+  background-color: white;
+  height: 10vw;
+  width: 70vw;
+  top: 125%;
+  left: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 5px 10px grey;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.inscription input {
+  border: 2px solid aqua;
+}
+.inscription__bouton button {
+  background-color: white;
+  border: 2px solid aqua;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.inscription__bouton p {
+  color: white;
+}
+
+.galerie {
+  margin: 100px 20px 20px 50px;
+}
+.galerie__images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+@media (min-width: 700px) {
+  .galerie__images {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.galerie__fig img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.burger {
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  .burger {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+  }
+}
+
+.chk__burger {
+  display: none;
+}
+
+.chk__burger:checked ~ .entete__nav {
+  display: flex;
 }
 
 .entete {
@@ -125,6 +214,8 @@ Layout
 }
 .entete__nav {
   display: flex;
+  justify-content: flex-end;
+  position: static;
   flex-direction: row;
   align-items: center;
   gap: 0 40px;
@@ -132,6 +223,32 @@ Layout
 }
 @media screen and (max-width: 700px) {
   .entete__nav {
+    display: none;
     flex-direction: column;
+    height: 52vh;
+    width: 100vw;
+    padding-bottom: 20px;
+    gap: 30px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
   }
+}
+
+/* /////////////////////
+Base
+//////////////////////// */
+a {
+  color: #5a5;
+  text-decoration: none;
+}
+a:hover {
+  color: rgba(0, 0, 0, 0.1);
+}
+a:visited {
+  color: rgba(0, 0, 0, 0.3);
+}
+a:focus {
+  color: rgba(0, 0, 0, 0.4);
 }/*# sourceMappingURL=style.css.map */
