@@ -13,6 +13,14 @@
         flex-direction: column;
         justify-content: space-between;
         margin: 50px;
+
+        a {
+            font-weight: bold;
+        }
+
+        p {
+            font-weight: bold;
+        }
     }
 
     &__titre {

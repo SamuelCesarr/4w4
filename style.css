@@ -123,6 +123,12 @@ Layout
   justify-content: space-between;
   margin: 50px;
 }
+.hero__contenu-global a {
+  font-weight: bold;
+}
+.hero__contenu-global p {
+  font-weight: bold;
+}
 .hero__titre {
   text-shadow: green 1px 0 10px;
 }
