@@ -3,4 +3,4 @@
 
 Créer une page d'accueil en utilisant le standard BEM et Sass pour reproduire le contenu de maquette.
 Auteur: Samuel César
-### Githyb-page: https://github.com/SamuelCesarr/4w4/tree/tp1
+### Github-page: https://github.com/SamuelCesarr/4w4
