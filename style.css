@@ -188,8 +188,7 @@ Layout
 .galerie__fig img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .burger {
@@ -218,6 +217,9 @@ Layout
   justify-content: space-between;
   align-items: center;
 }
+.entete__logo img {
+  width: 150px;
+}
 .entete__nav {
   display: flex;
   justify-content: flex-end;
@@ -242,22 +244,9 @@ Layout
   }
 }
 
-/* /////////////////////
-Base
-//////////////////////// */
-a {
-  color: #5a5;
-  text-decoration: none;
-}
-a:hover {
-  color: rgba(0, 0, 0, 0.1);
-}
-a:visited {
-  color: rgba(0, 0, 0, 0.3);
-}
-a:focus {
-  color: rgba(0, 0, 0, 0.4);
-}
+/*
+  --------------------------------- Layout du pied de page
+*/
 footer {
   background-color: rgb(236, 136, 13);
   color: #000;
@@ -285,4 +274,20 @@ footer {
 .piedpage__s1__description {
   flex: 1 0 300px;
 }
-/*# sourceMappingURL=style.css.map */
+
+/* /////////////////////
+Base
+//////////////////////// */
+a {
+  color: #5a5;
+  text-decoration: none;
+}
+a:hover {
+  color: rgba(0, 0, 0, 0.1);
+}
+a:visited {
+  color: rgba(0, 0, 0, 0.3);
+}
+a:focus {
+  color: rgba(0, 0, 0, 0.4);
+}/*# sourceMappingURL=style.css.map */

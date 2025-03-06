@@ -21,6 +21,11 @@
     justify-content: space-between;
     align-items: center;
 
+    &__logo {
+        img {
+            width: 150px;
+        }
+      }
 
     &__nav {
         display: flex;
