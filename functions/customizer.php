@@ -68,6 +68,19 @@ $wp_customize->add_control('footer_telephone', array(
   'section' => 'footer_section',
   'type' => 'text',
 ));
+
+///////////////////////////////////////////////////////// Champ adresse
+$wp_customize->add_setting('footer_adresse', array(
+  'default' => __('3800, rue Sherbrooke, Montreal', 'theme_31w'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+
+$wp_customize->add_control('footer_adresse', array(
+  'label' => __('Adresse', 'theme_31w'),
+  'section' => 'footer_section',
+  'type' => 'text',
+));
+
 }
 
 add_action('customize_register', 'theme_31w_customize_register');
