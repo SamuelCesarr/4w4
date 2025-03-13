@@ -18,6 +18,18 @@ $wp_customize->add_control('hero_auteur', array(
   'type' => 'text',
 ));
 
+//////////////////////////////////////////////////////// le courriel
+$wp_customize->add_setting('hero_courriel', array(
+  'default' => __('info@cmaisonneuve.qc.ca', 'theme_31w'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+
+$wp_customize->add_control('hero_courriel', array(
+  'label' => __('Courriel', 'theme_31w'),
+  'section' => 'hero_section',
+  'type' => 'text',
+));
+
 ////////////////////////////////////////////////// image en background de la zone hero
 $wp_customize->add_setting('hero_background', array(
   'default' => '',
