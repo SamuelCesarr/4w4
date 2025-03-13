@@ -1,13 +1,18 @@
 <footer>
+    <?php
+    $footer_mission = get_theme_mod('footer_mission', 'Default Title');
+
+    ?>
+
     <div class="piedpage global">
         <section class="piedpage__s1">
-         
-                <?php wp_nav_menu(array(
-                    "menu"=> "externe",
-                    "container" => "nav",
-                    "container_class" => "piedpage__s1__externe"
-                )); ?>
-    
+
+            <?php wp_nav_menu(array(
+                "menu" => "externe",
+                "container" => "nav",
+                "container_class" => "piedpage__s1__externe"
+            )); ?>
+
 
             <div class="piedpage__s1__adresse">
                 <div class="piedpage__s1__adresse__coord">
@@ -18,7 +23,7 @@
                 </div>
             </div>
             <div class="piedpage__s1__description">
-                Collège de Maisonneuve
+                <?php echo $footer_mission; ?>
             </div>
         </section>
         <section class="piedpage__s2">

@@ -5,7 +5,7 @@
 ?>
 <article class="carte carte--grande">
                 <figure class="carte__image">
-                    <img src="<?php echo get_template_directory_uri() . '/images/paysage1.jpg' ?>" alt="image de paysage">
+                    <img src="<?php echo get_template_directory_uri() . '/images/paysage2.jpg' ?>" alt="image de paysage">
                 </figure>
                 <div class="carte__contenu">
                     <?php
