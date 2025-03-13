@@ -16,7 +16,7 @@
 
             <div class="piedpage__s1__adresse">
                 <div class="piedpage__s1__adresse__coord">
-                    3800, rue Sherbrooke, Montreal
+                    <?php echo $footer_telephone; ?>
                 </div>
                 <div class="piedpage__s1__adresse__recherche">
                     <?php get_search_form();   ?>
