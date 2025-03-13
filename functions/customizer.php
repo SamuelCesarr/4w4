@@ -8,7 +8,7 @@ function theme_31w_customize_register($wp_customize) {
 ));
 //////////////////////////////////////////////////////// l'auteur
 $wp_customize->add_setting('hero_auteur', array(
-  'default' => __('Eddy Martin', 'theme_31w'),
+  'default' => __('Samuel César', 'theme_31w'),
   'sanitize_callback' => 'sanitize_text_field'
 ));
 
@@ -57,6 +57,7 @@ $wp_customize->add_control('footer_mission', array(
   'type' => 'textarea',
 ));
 
+///////////////////////////////////////////////////////// Champ téléphone
 $wp_customize->add_setting('footer_telephone', array(
   'default' => __('514-254-7131', 'theme_31w'),
   'sanitize_callback' => 'sanitize_text_field'
@@ -65,7 +66,7 @@ $wp_customize->add_setting('footer_telephone', array(
 $wp_customize->add_control('footer_telephone', array(
   'label' => __('Telephone', 'theme_31w'),
   'section' => 'footer_section',
-  'type' => 'textarea',
+  'type' => 'text',
 ));
 }
 

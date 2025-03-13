@@ -1,7 +1,7 @@
 <footer>
     <?php
     $footer_mission = get_theme_mod('footer_mission', 'Default Title');
-
+    $footer_telephone = get_theme_mod('footer_telephone', 'Default Title');
     ?>
 
     <div class="piedpage global">

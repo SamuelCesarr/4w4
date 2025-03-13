@@ -28,7 +28,7 @@ $hero_background = get_theme_mod('hero_background', 'Default Title');
             <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=000000" width="20" height="20">
             <img src="https://s2.svgbox.net/social.svg?ic=instagram&color=000" width="20" height="20">
         </div>
-        <p>Auteur:<?php echo $hero_auteur;  ?></p>
+        <p>Auteur: <?php echo $hero_auteur;  ?></p>
     </div>
 </section>
 <section class="galerie">
