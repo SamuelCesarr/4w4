@@ -3,6 +3,7 @@
     $footer_mission = get_theme_mod('footer_mission', 'Default Title');
     $footer_telephone = get_theme_mod('footer_telephone', 'Default Title');
     $footer_adresse = get_theme_mod('footer_adresse', 'Default Title');
+    $footer_courriel = get_theme_mod('footer_courriel', 'Default Title');
     ?>
 
     <div class="piedpage global">
@@ -21,6 +22,9 @@
                 </div>
                 <div class="piedpage__s1__adresse__tel">
                     <?php echo $footer_telephone; ?>
+                </div>
+                <div class="piedpage__s1__adresse__courriel">
+                    <?php echo $footer_courriel; ?>
                 </div>
                 <div class="piedpage__s1__adresse__coord">
                     <?php echo $footer_adresse; ?>

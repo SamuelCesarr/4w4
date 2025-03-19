@@ -81,6 +81,18 @@ $wp_customize->add_control('footer_telephone', array(
   'type' => 'text',
 ));
 
+///////////////////////////////////////////////////////// Champ courriel
+$wp_customize->add_setting('footer_courriel', array(
+  'default' => __('info@cmaisonneuve.qc.ca', 'theme_31w'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+
+$wp_customize->add_control('footer_courriel', array(
+  'label' => __('Courriel', 'theme_31w'),
+  'section' => 'footer_section',
+  'type' => 'text',
+));
+
 ///////////////////////////////////////////////////////// Champ adresse
 $wp_customize->add_setting('footer_adresse', array(
   'default' => __('3800, rue Sherbrooke, Montreal', 'theme_31w'),

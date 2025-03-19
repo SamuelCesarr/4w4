@@ -284,6 +284,9 @@ footer {
 .piedpage__s1__adresse__coord {
   flex: 1 0 30px;
 }
+.piedpage__s1__adresse__courriel {
+  flex: 1 0 30px;
+}
 .piedpage__s1__adresse__recherche {
   flex: 1 0 30px;
 }
