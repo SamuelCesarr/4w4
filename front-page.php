@@ -34,36 +34,10 @@ $hero_background = get_theme_mod('hero_background', 'Default Title');
 <section class="galerie">
     <h2 class="galerie__titre">Nos destinations favorites</h2>
     <div class="galerie__images">
-        <figure class="galerie__fig">
-            <img src="<?php echo get_template_directory_uri() . '/images/paysage1.jpg' ?>" alt="image de paysage">
-        </figure>
-        <figure class="galerie__fig">
-            <img src="<?php echo get_template_directory_uri() . '/images/paysage2.jpg' ?>" alt="image de paysage">
-        </figure>
-        <figure class="galerie__fig">
-            <img src="<?php echo get_template_directory_uri() . '/images/paysage3.jpg' ?>" alt="image de paysage">
-        </figure>
-        <figure class="galerie__fig">
-            <img src="<?php echo get_template_directory_uri() . '/images/paysage4.jpg' ?>" alt="image de paysage">
-        </figure>
-        <figure class="galerie__fig">
-            <img src="<?php echo get_template_directory_uri() . '/images/paysage5.jpg' ?>" alt="image de paysage">
-        </figure>
-        <figure class="galerie__fig">
-            <img src="<?php echo get_template_directory_uri() . '/images/paysage6.jpg' ?>" alt="image de paysage">
-        </figure>
-        <figure class="galerie__fig">
-            <img src="<?php echo get_template_directory_uri() . '/images/paysage7.jpg' ?>" alt="image de paysage">
-        </figure>
-        <figure class="galerie__fig">
-            <img src="<?php echo get_template_directory_uri() . '/images/paysage8.jpg' ?>" alt="image de paysage">
-        </figure>
-        <figure class="galerie__fig">
-            <img src="<?php echo get_template_directory_uri() . '/images/paysage9.jpeg' ?>" alt="image de paysage">
-        </figure>
-        <figure class="galerie__fig">
-            <img src="<?php echo get_template_directory_uri() . '/images/paysage10.jpg' ?>" alt="image de paysage">
-        </figure>
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <?php get_template_part("gabarit/carte"); ?>
+        <?php endwhile;
+        endif; ?>
     </div>
 </section>
 
