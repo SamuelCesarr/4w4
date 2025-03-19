@@ -16,14 +16,14 @@
 
 
             <div class="piedpage__s1__adresse">
+                <div class="piedpage__s1__adresse__recherche">
+                    <?php get_search_form();   ?>
+                </div>
                 <div class="piedpage__s1__adresse__tel">
                     <?php echo $footer_telephone; ?>
                 </div>
                 <div class="piedpage__s1__adresse__coord">
                     <?php echo $footer_adresse; ?>
-                </div>
-                <div class="piedpage__s1__adresse__recherche">
-                    <?php get_search_form();   ?>
                 </div>
             </div>
             <div class="piedpage__s1__description">

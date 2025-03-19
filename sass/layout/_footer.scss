@@ -14,30 +14,45 @@ footer {
     &__s1 {
         display: flex;
         flex-wrap: wrap;
-        gap: 3rem;
+        flex-direction: column;
+        gap: 1rem;
 
         &__externe {
             flex: 0 0 20%;
+        }
 
-            & .menu {
-                //ul
-                display: flex;
-                flex-direction: column;
-            }
-
-
+        & .menu {
+            //ul
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         &__adresse {
-            flex: 0 0 40%;
+            flex: 0 0 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-            &__coord {}
+            &__tel {
+                flex: 1 0 30px;
+            }
 
-            &__recherche {}
+            &__coord {
+                flex: 1 0 30px;
+            }
+
+            &__recherche {
+                flex: 1 0 30px;
+            }
         }
 
         &__description {
-            flex: 1 0 300px;
+            flex: 1 0 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
 }

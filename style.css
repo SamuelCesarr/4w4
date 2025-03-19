@@ -216,6 +216,7 @@ Layout
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: darkblue;
 }
 .entete__logo img {
   width: 150px;
@@ -259,20 +260,38 @@ footer {
 .piedpage__s1 {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
+  flex-direction: column;
+  gap: 1rem;
 }
 .piedpage__s1__externe {
   flex: 0 0 20%;
 }
-.piedpage__s1__externe .menu {
+.piedpage__s1 .menu {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .piedpage__s1__adresse {
-  flex: 0 0 40%;
+  flex: 0 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.piedpage__s1__adresse__tel {
+  flex: 1 0 30px;
+}
+.piedpage__s1__adresse__coord {
+  flex: 1 0 30px;
+}
+.piedpage__s1__adresse__recherche {
+  flex: 1 0 30px;
 }
 .piedpage__s1__description {
-  flex: 1 0 300px;
+  flex: 1 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* /////////////////////
