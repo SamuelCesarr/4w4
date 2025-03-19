@@ -287,6 +287,12 @@ footer {
 .piedpage__s1__adresse__recherche {
   flex: 1 0 30px;
 }
+.piedpage__s1__icone-app {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 .piedpage__s1__description {
   flex: 1 0 50px;
   display: flex;

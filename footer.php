@@ -26,6 +26,10 @@
                     <?php echo $footer_adresse; ?>
                 </div>
             </div>
+            <div class="piedpage__s1__icone-app">
+                <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=000000" width="20" height="20">
+                <img src="https://s2.svgbox.net/social.svg?ic=instagram&color=000" width="20" height="20">
+            </div>
             <div class="piedpage__s1__description">
                 <?php echo $footer_mission; ?>
             </div>
