@@ -8,6 +8,12 @@ get_header(); // Inclut l'en-tête du site
                 <h1 class="page-title"><?php esc_html_e('Oops! Cette page ne peut pas être trouvée.', 'textdomain'); ?></h1>
             </header><!-- .page-header -->
 
+            <?php wp_nav_menu(array(
+                "menu" => "externe",
+                "container" => "nav",
+                "container_class" => "menu__externe"
+            )); ?>
+
             <div class="page-content">
                 <p><?php esc_html_e('Rien n\'a été trouvé à cet endroit. Essayez une recherche?', 'textdomain'); ?></p>
                 <div class="hero__icone-app">
