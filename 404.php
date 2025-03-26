@@ -22,6 +22,7 @@ get_header(); // Inclut l'en-tête du site
                 </div>
                 <?php get_search_form(); // Affiche le formulaire de recherche 
                 ?>
+                <p><?php esc_html_e('Pour utiliser le customizer, cliquer sur Personnaliser et ajouter les réglages qui vous conviennent.'); ?></p>
             </div><!-- .page-content -->
         </section><!-- .error-404 -->
     </main><!-- #main -->
