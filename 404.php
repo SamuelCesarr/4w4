@@ -5,11 +5,11 @@ get_header(); // Inclut l'en-tête du site
     <main id="main" class="site-main">
         <section class="error-404 not-found">
             <header class="page-header">
-                <h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'textdomain' ); ?></h1>
+                <h1 class="page-title"><?php esc_html_e( 'Oops! Cette page ne peut pas être trouvée.', 'textdomain' ); ?></h1>
             </header><!-- .page-header -->
 
             <div class="page-content">
-                <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'textdomain' ); ?></p>
+                <p><?php esc_html_e( 'Rien n\'a été trouvé à cet endroit. Essayez une recherche?', 'textdomain' ); ?></p>
 
                 <?php get_search_form(); // Affiche le formulaire de recherche ?>
             </div><!-- .page-content -->
