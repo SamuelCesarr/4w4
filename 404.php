@@ -3,9 +3,9 @@ get_header(); // Inclut l'en-tête du site
 ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
-        <section class="error-404 not-found">
+        <section class="error-404 not-found" style="background: url('<?php echo get_template_directory_uri(); ?>/images/ilepalmier.jpg'); background-size: cover;">
             <header class="page-header">
-                <h1 class="page-title"><?php esc_html_e('Oops! Cette page ne peut pas être trouvée.', 'textdomain'); ?></h1>
+                <h1 class="page-title"><?php esc_html_e('Oops, vous avez échoué sur l\'île 404 !', 'textdomain'); ?></h1>
             </header><!-- .page-header -->
 
             <?php wp_nav_menu(array(
@@ -15,7 +15,7 @@ get_header(); // Inclut l'en-tête du site
             )); ?>
 
             <div class="page-content">
-                <p><?php esc_html_e('Rien n\'a été trouvé à cet endroit. Essayez une recherche?', 'textdomain'); ?></p>
+                <p><?php esc_html_e('Pas de panique, cher membre explorateur ! Vous avez dérivé un peu trop loin des destinations de rêve que notre club a soigneusement sélectionnées pour vous. Reprenez votre périple en cliquant sur \'Accueil\' pour découvrir à nouveau nos voyages d’exception !', 'textdomain'); ?></p>
                 <div class="hero__icone-app">
                     <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=000000" width="20" height="20">
                     <img src="https://s2.svgbox.net/social.svg?ic=instagram&color=000" width="20" height="20">

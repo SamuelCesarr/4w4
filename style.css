@@ -268,15 +268,16 @@ footer {
 }
 .piedpage__s1 .menu {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 60%;
 }
 .piedpage__s1__adresse {
   flex: 0 0 100px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 .piedpage__s1__adresse__tel {
   flex: 1 0 30px;
