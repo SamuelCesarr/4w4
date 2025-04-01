@@ -104,4 +104,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: orange;
+
+    .page-header {
+        background-color: rgb(255 255 255 / 0.2);
+        width: 80%;
+        text-align: center;
+        font-size: 64px;
+    }
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+
+    p {
+        text-align: center;
+        background-color: rgb(255 255 255 / 0.2);   
+        font-weight: bold;
+        font-size: 20px;
+        padding: 16px;
+    }
 }
