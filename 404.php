@@ -3,7 +3,7 @@ get_header(); // Inclut l'en-tête du site
 ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
-        <section class="error-404 not-found" style="background: url('<?php echo get_template_directory_uri(); ?>/images/ilepalmier.jpg'); background-size: cover;">
+        <section class="error-404-not-found" style="background: url('<?php echo get_template_directory_uri(); ?>/images/ilepalmier.jpg');">
             <header class="page-header">
                 <h1 class="page-title"><?php esc_html_e('Oops, vous avez échoué sur l\'île 404 !', 'textdomain'); ?></h1>
             </header><!-- .page-header -->
