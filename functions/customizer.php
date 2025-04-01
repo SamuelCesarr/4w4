@@ -105,6 +105,70 @@ $wp_customize->add_control('footer_adresse', array(
   'type' => 'text',
 ));
 
+//////////////////////////////////////////////////////// Nouvelle section 404
+
+$wp_customize->add_section('section_404', array(
+  'title' => __('Section 404', 'theme_31w'),
+  'priority' => 30,
+));
+
+////////////////////////////////////////////////// image en background
+$wp_customize->add_setting('404_background', array(
+  'default' => '',
+  'sanitize_callback' => 'esc_url_raw',
+));
+
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, '404_background', array(
+  'label' => __('Image en background', 'theme_31w'),
+  'section' => 'section_404',
+)));
+
+////////////////////////////////////////////////// couleur des boutons du menu 404
+$wp_customize->add_setting('404_couleur', array(
+  'default' => '',
+  'sanitize_callback' => 'esc_url_raw',
+));
+
+$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, '404_couleur', array(
+  'label' => __('Couleur des boutons', 'theme_31w'),
+  'section' => 'section_404',
+)));
+
+function custom_nav_couleur_404_dynamic_css() {
+  $couleur_404 = get_theme_mod('couleur_404', '#ffffff');
+  ?>
+  <style>
+      :root {
+          --couleur_404: <?php echo esc_attr($couleur_404); ?>;
+      }
+  </style>
+  <?php
+}
+add_action('wp_head', 'custom_nav_couleur_404_dynamic_css');
+
+///////////////////////////////////////////////////////// Champ titre
+$wp_customize->add_setting('404_titre', array(
+  'default' => __('Oops, vous avez échoué sur l\'île 404 !', 'theme_31w'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+
+$wp_customize->add_control('404_titre', array(
+  'label' => __('Titre', 'theme_31w'),
+  'section' => 'section_404',
+  'type' => 'text',
+));
+
+///////////////////////////////////////////////////////// Champ texte
+$wp_customize->add_setting('404_message', array(
+  'default' => __('Pas de panique, cher membre explorateur ! Vous avez dérivé un peu trop loin des destinations de rêve que notre club a soigneusement sélectionnées pour vous. Reprenez votre périple en cliquant sur \'Accueil\' pour découvrir à nouveau nos voyages d’exception !', 'theme_31w'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+
+$wp_customize->add_control('404_message', array(
+  'label' => __('Message', 'theme_31w'),
+  'section' => 'section_404',
+  'type' => 'text',
+));
 }
 
 add_action('customize_register', 'theme_31w_customize_register');
