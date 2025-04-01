@@ -222,6 +222,24 @@ Layout
   padding: 16px;
 }
 
+.recherche {
+  position: relative;
+  max-width: 350px;
+  margin: 20px auto;
+}
+.recherche__input {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid yellow;
+}
+.recherche__input::placeholder {
+  color: yellow;
+  padding-left: 10px;
+}
+
 .burger {
   display: none;
 }
