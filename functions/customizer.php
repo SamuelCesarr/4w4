@@ -169,6 +169,22 @@ $wp_customize->add_control('404_message', array(
   'section' => 'section_404',
   'type' => 'text',
 ));
+
+///////////////////////////////////////////////////////// Champ recherche
+$wp_customize->add_setting('404_recherche', array(
+  'default'   => true,
+  'sanitize_callback' => 'wp_validate_boolean',
+));
+
+$wp_customize->add_control(
+  '404_recherche_control',
+  array(
+      'label'    => __('Barre de recherche', 'theme_31w'),
+      'section'  => 'section_404',
+      'settings' => '404_recherche',
+      'type'     => 'checkbox',
+  )
+);
 }
 
 add_action('customize_register', 'theme_31w_customize_register');
