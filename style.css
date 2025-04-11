@@ -247,6 +247,7 @@ Layout
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  padding: 10px;
   text-align: center;
 }
 .menu__externe a {
