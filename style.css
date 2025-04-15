@@ -104,6 +104,18 @@ Le composant .carte
   padding: 0 3px;
 }
 
+.categorie__ul {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.categorie__ul__li {
+  border: 1px solid #aaa;
+  padding: 3px;
+  cursor: pointer;
+}
+
 /* /////////////////////////
 Layout 
 /////////////////////////// */

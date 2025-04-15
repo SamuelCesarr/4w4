@@ -1,7 +1,8 @@
 <?php
 $hero_auteur = get_theme_mod('hero_auteur', 'Default Title');
-for ($k = 0; $k < 3; $k++) {
-    $hero_background = get_theme_mod('hero_background' . $k, '');
+
+for ($k=0; $k<3; $k++) {
+    $hero_background[$k] = get_theme_mod('hero_background_' . $k, '');
 }
 ?>
 <section class="hero">
@@ -9,6 +10,9 @@ for ($k = 0; $k < 3; $k++) {
     <div class="hero__carrousel" style="background-image: url('<?php echo $hero_background[0] ?>');"></div>
     <div class="hero__carrousel" style="background-image: url('<?php echo $hero_background[1] ?>');"></div>
     <div class="hero__carrousel" style="background-image: url('<?php echo $hero_background[2] ?>');"></div>
+    <div class="hero__radio">
+        <input class="hero__radio__input" type="radio" name="carrousel" id="">
+    </div>
 
     <!-- /////////////////////////////////////// hero__contenu -->
     <div class="hero__contenu global">

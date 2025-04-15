@@ -5,14 +5,22 @@
 
 <!-- /////////////////////////////////////// section populaire -->
 <section class="populaire">
-    <div class="global">
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <article class="populaire__article">
-                    <h2 class="populaire__titre"><?php the_title(); ?></h2>
-                    <div class="populaire__contenu"><?php echo wp_trim_words(get_the_content(), 20, "..."); ?></div>
-                </article>
-        <?php endwhile;
-        endif; ?>
+     <div class="boiteflex global">
+         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+         <?php if (in_category('galerie')){
+             the_content();
+         } else { ?>         
+         <?php get_template_part("gabarit/carte"); ?>
+         <?php } ?>
+         <?php endwhile; endif; ?>
+     </div>
+ </section>
+
+<!-- //////////////////////////////////// section catégorie REST-API -->
+<section class="categories">
+    <h2 class="categories__titre">Catégories</h2>
+    <div class="categories__list">
+        <?php categories_liste("destination"); ?>
     </div>
 </section>
 
