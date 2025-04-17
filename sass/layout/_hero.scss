@@ -10,9 +10,19 @@
        width : 100%;
        background-position: center;
        z-index : -1;
-
+       background-size: cover;
+       background-repeat: no-repeat;
     }
     &__contenu {
         z-index : 9;
+    }
+    &__radio {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 10;
     }
 }
