@@ -2,32 +2,29 @@
     console.log("vive Javascript")
 
     let categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
-    const domaine = window.location.href
-    //const apiUrl = `${domaine}wp-json/wp/v2/posts?categories=${categoryId}`;
-    let apiUrl = `${domaine}wp-json/wp/v2/posts?categories=${categoryId}`;
+    // permet de récupérer l'adrsse de la page d'accueil contenu dabs la balise « base »
+    const domaine = document.querySelector('base').getAttribute('href')
+    mon_fetch(categoryId)
     const categorie__ul__li = document.querySelectorAll(".categorie__ul__li")
     console.log("categorie__ul__li.length", categorie__ul__li.length)
-    mon_fetch(apiUrl);
     categorie__ul__li.forEach(li => {
-        li.addEventListener("mousedown", function () {
-            console.log(li.dataset.id)
+        li.addEventListener("mousedown",function(){
+            console.log(li.dataset.id) 
             categoryId = li.dataset.id
-            apiUrl = `${domaine}wp-json/wp/v2/posts?categories=${categoryId}`;
-            console.log("apiUrl = ", apiUrl)
-            mon_fetch(apiUrl)
+            mon_fetch(categoryId)
         })
-
     })
 
-    function mon_fetch(apiUrl){
-    fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            //  <div>${article.excerpt.rendered}</div>
-            const destinationList = document.querySelector('.destination__list');
-            data.forEach(article => {
-                const articleElement = document.createElement('div');
-                articleElement.innerHTML = `
+    function mon_fetch(categoryId){
+        const apiUrl = `${domaine}wp-json/wp/v2/posts?categories=${categoryId}`;
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                //  <div>${article.excerpt.rendered}</div>
+                const destinationList = document.querySelector('.destination__list');
+                data.forEach(article => {
+                    const articleElement = document.createElement('div');
+                    articleElement.innerHTML = `
                         <h3>${article.title.rendered}</h3>
                        
                         <p>${article.excerpt.rendered}</p>

@@ -40,6 +40,15 @@ function theme_tp_enqueue_styles()
       '/js/carrousel.js'),
     true
   );
+
+  wp_enqueue_script(
+    'categories',
+    get_template_directory_uri() . '/js/categories.js',
+    array(),
+    filemtime(get_template_directory() .
+      '/js/categories.js'),
+    true
+  );
 }
 add_action('wp_enqueue_scripts', 'theme_tp_enqueue_styles');
 

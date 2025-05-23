@@ -43,6 +43,18 @@ function theme_31w_customize_register($wp_customize)
       'section' => 'hero_section',
     )));
   }
+  //////////////////////////////////////////////////////// nb d'images du carrousel
+    $wp_customize->add_setting('hero_nb_images', array(
+      'default' => 3,
+      'sanitize_callback' => 'absint',
+    ));
+    $wp_customize->add_control('hero_nb_images', array(
+        'type' => 'number',
+        'section' => 'hero_section',
+        'label' => 'Nombre d\'images du carrousel',
+        'input_attrs' => array('min' => 1, 'max' => 10)
+    ));
+
   ////////////////////////////////////////////////// couleur du texte de la zone hero
   $wp_customize->add_setting('hero_couleur', array(
     'default' => '',
@@ -70,6 +82,22 @@ function theme_31w_customize_register($wp_customize)
     'label' => __('Mission', 'theme_31w'),
     'section' => 'footer_section',
     'type' => 'textarea',
+  ));
+
+  ///////////////////////////////////////////////////////// Champ destination image
+  $wp_customize->add_setting('footer_destination_image', [
+    'default' => '',
+    'sanitize_callback' => 'esc_url',
+  ]);
+
+  $wp_customize->add_control(new WP_Customize_Image_Control(
+      $wp_customize,
+      'footer_destination_image',
+      [
+          'label' => 'Image de destination pour le footer',
+          'section' => 'footer_section',
+          'settings' => 'footer_destination_image',
+      ]
   ));
 
   ///////////////////////////////////////////////////////// Champ téléphone
@@ -107,6 +135,40 @@ function theme_31w_customize_register($wp_customize)
     'section' => 'footer_section',
     'type' => 'text',
   ));
+
+  ///////////////////////////////////////////////////////// Champ icone facebook
+  $wp_customize->add_setting('footer_social_facebook', [
+      'default' => '',
+      'sanitize_callback' => 'esc_url',
+  ]);
+  $wp_customize->add_control('footer_social_facebook', [
+      'label' => 'Lien Facebook',
+      'section' => 'footer_section',
+      'type' => 'url',
+  ]);
+
+  ///////////////////////////////////////////////////////// Champ icone instagram
+  $wp_customize->add_setting('footer_social_instagram', [
+      'default' => '',
+      'sanitize_callback' => 'esc_url',
+  ]);
+  $wp_customize->add_control('footer_social_instagram', [
+      'label' => 'Lien Instagram',
+      'section' => 'footer_section',
+      'type' => 'url',
+  ]);
+
+  ///////////////////////////////////////////////////////// Champ icone github
+  $wp_customize->add_setting('footer_social_github', [
+      'default' => '',
+      'sanitize_callback' => 'esc_url',
+  ]);
+
+  $wp_customize->add_control('footer_social_github', [
+      'label' => 'Lien Github',
+      'section' => 'footer_section',
+      'type' => 'url',
+  ]);
 
   //////////////////////////////////////////////////////// Nouvelle section 404
 

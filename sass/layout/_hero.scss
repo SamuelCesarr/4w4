@@ -12,9 +12,17 @@
        z-index : -1;
        background-size: cover;
        background-repeat: no-repeat;
+       opacity: 0;
+       transition: opacity 0.7s;
+       &--active {
+        opacity: 1;
+        pointer-events: auto;
+       }
     }
     &__contenu {
         z-index : 9;
+        display: flex;
+        flex-direction: column;
     }
     &__radio {
         position: absolute;

@@ -34,6 +34,11 @@ Les composants
     gap: 6px 0;
   }
 }
+.menu__li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .menu__a {
   padding: 2px 5px;
 }
@@ -106,14 +111,51 @@ Le composant .carte
 
 .categorie__ul {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
   list-style-type: none;
 }
 .categorie__ul__li {
-  border: 1px solid #aaa;
-  padding: 3px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
+}
+.categorie__ul__li--actif {
+  background-color: #0056b3;
+}
+.categorie__ul__li:hover {
+  background-color: #0056b3;
+}
+
+.categories__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+}
+
+.destination__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.categories__titre,
+.destination__titre {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.vague {
+  position: relative;
 }
 
 /* /////////////////////////
@@ -340,14 +382,15 @@ footer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 .piedpage__s1__externe {
-  flex: 0 0 20%;
+  flex: 0 0 10%;
 }
 .piedpage__s1 .menu {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 60%;
@@ -356,7 +399,7 @@ footer {
   flex: 0 0 100px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 .piedpage__s1__adresse__tel {
   flex: 1 0 30px;
@@ -396,9 +439,17 @@ footer {
   z-index: -1;
   background-size: cover;
   background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+.hero__carrousel--active {
+  opacity: 1;
+  pointer-events: auto;
 }
 .hero__contenu {
   z-index: 9;
+  display: flex;
+  flex-direction: column;
 }
 .hero__radio {
   position: absolute;
@@ -410,6 +461,35 @@ footer {
   z-index: 10;
 }
 
+/**
+Animation de la section hero
+*/
+.hero__animation {
+  /* tous les bloc sont invisible par défaut */
+  display: none;
+}
+.hero__animation--active {
+  /* Un seul bloc doit êtere visible pour  être animé */
+  display: block;
+}
+
+.hero__titre, .hero__description {
+  position: relative;
+  animation: anim_contenu 2s cubic-bezier(0.91, -0.59, 0.19, 1.59) forwards;
+}
+.hero__titre {
+  transform: translateY(-1000px);
+}
+.hero__description {
+  transform: translateX(-1000px);
+  animation-delay: 2s;
+}
+
+@keyframes anim_contenu {
+  100% {
+    transform: translate(0, 0);
+  }
+}
 /* /////////////////////
 Base
 //////////////////////// */
