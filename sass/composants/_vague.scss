@@ -1,3 +1,31 @@
 .vague {
     position: relative;
 }
+
+.vague-separateur, section {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.vague-separateur + section,
+section + .vague-separateur,
+.vague-separateur + .vague-separateur,
+.vague-separateur + footer,
+.section + footer {
+    margin-top: -1px;
+}
+
+.vague-separateur {
+    display: block;
+    width: 100vw;
+    height: 120px;
+    line-height: 0;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    z-index: 1;
+    background: none !important;
+}

@@ -5,7 +5,7 @@ $footer_adresse = get_theme_mod('footer_adresse', 'Default Title');
 $footer_courriel = get_theme_mod('footer_courriel', 'Default Title');
 $footer_couleur_arriere = get_theme_mod('footer_couleur_arriere', '#ec880d');
 /* permet d'afficher une vague avant le footer */
-vague($footer_couleur_arriere)
+creer_vague($footer_couleur_arriere, '#ec880d');
 ?>
 
 <footer style="background-color: <?= $footer_couleur_arriere ?> ">
