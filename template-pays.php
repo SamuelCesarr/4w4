@@ -13,7 +13,7 @@ get_header();
     <div class="pays__galerie">
         <img src="<?php echo get_template_directory_uri(); ?>/images/france.jpg" alt="France">
         <img src="<?php echo get_template_directory_uri(); ?>/images/japon.jpg" alt="Japon">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/mexique.jpg" alt="Mexique">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/mexique.jpeg" alt="Mexique">
     </div>
 </section>
 
@@ -24,7 +24,6 @@ if (function_exists('creer_vague')) {
 ?>
 
 <section class="pays__restapi global">
-    <h2>Destinations par pays</h2>
     <nav class="pays__menu">
     </nav>
     <div class="pays__destinations">

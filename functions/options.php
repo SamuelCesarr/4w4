@@ -49,6 +49,15 @@ function theme_tp_enqueue_styles()
       '/js/categories.js'),
     true
   );
+
+  wp_enqueue_script(
+    'pays',
+    get_template_directory_uri() . '/js/pays.js',
+    array(),
+    filemtime(get_template_directory() .
+      '/js/pays.js'),
+    true
+  );
 }
 add_action('wp_enqueue_scripts', 'theme_tp_enqueue_styles');
 
