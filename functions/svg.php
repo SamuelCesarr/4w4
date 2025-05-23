@@ -33,4 +33,12 @@ function afficher_icones_sociaux() {
     <?php
 } 
 
+function creer_vague($couleur_haut, $couleur_bas) {
+    echo '
+    <div class="vague-separateur" style="background: linear-gradient(to bottom, '.$couleur_haut.' 0%, '.$couleur_bas.' 100%);">
+        <svg viewBox="0 0 1440 120" width="100%" height="120" preserveAspectRatio="none">
+            <path d="M0,0 C480,120 960,0 1440,120 L1440,0 L0,0 Z" fill="'.$couleur_bas.'"/>
+        </svg>
+    </div>';
+}
 }
