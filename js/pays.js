@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
     const menu = document.querySelector('.pays__menu');
     const destinations = document.querySelector('.pays__destinations');
-    const domaine = document.querySelector('base').getAttribute('href')
+    const domaine = document.querySelector('base').getAttribute('href');
+    const titreCategorie = document.querySelector('.pays__categorie-titre');
 
     // Générer le menu
     pays.forEach((nom, i) => {
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Fonction pour charger les destinations
     function chargerDestinations(valeur, mode = 'search') {
+        titreCategorie.textContent = valeur;
         let url = '';
         if (mode === 'search') {
             url = `${domaine}/wp-json/wp/v2/posts?search=${encodeURIComponent(valeur)}`;
@@ -33,13 +35,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     data.forEach(post => {
                         html += `
                         <div class="destination__carte">
-                            <h3>${post.title.rendered}</h3>
-                            <div class="destination__accordeon">
-                                <button class="accordeon__btn">Voir la description</button>
-                                <div class="accordeon__contenu" style="display:none;">
-                                    ${post.excerpt.rendered}
-                                    <a href="${post.link}" target="_blank">Voir la destination</a>
-                                </div>
+                            <div class="destination__header">
+                                <h3 class="destination__titre" style="cursor:pointer;">
+                                    ${post.title.rendered}
+                                    <span class="destination__dots">...</span>
+                                </h3>
+                            </div>
+                            <div class="destination__accordeon" style="display:none;">
+                                ${post.excerpt.rendered}
+                                <a href="${post.link}" target="_blank">Voir la destination</a>
                             </div>
                         </div>`;
                     });
@@ -47,10 +51,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 destinations.innerHTML = html;
 
                 // Accordéon animé
-                document.querySelectorAll('.accordeon__btn').forEach(btn => {
-                    btn.addEventListener('click', function () {
-                        const contenu = this.nextElementSibling;
-                        contenu.style.display = contenu.style.display === 'block' ? 'none' : 'block';
+                document.querySelectorAll('.destination__titre').forEach(titre => {
+                    titre.addEventListener('click', function () {
+                        const accordeon = this.parentElement.nextElementSibling;
+                        accordeon.style.display = accordeon.style.display === 'block' ? 'none' : 'block';
                     });
                 });
             });

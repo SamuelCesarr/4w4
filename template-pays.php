@@ -24,10 +24,9 @@ if (function_exists('creer_vague')) {
 ?>
 
 <section class="pays__restapi global">
-    <nav class="pays__menu">
-    </nav>
-    <div class="pays__destinations">
-    </div>
+    <nav class="pays__menu"></nav>
+    <h2 class="pays__categorie-titre"></h2>
+    <div class="pays__destinations"></div>
 </section>
 
 <?php
